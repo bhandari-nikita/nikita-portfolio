@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -73,10 +74,17 @@ export function Navbar() {
             {/* Logo */}
             <a
               href="#"
-              className="text-sm font-semibold tracking-widest text-white/80 hover:text-white transition-colors uppercase"
-              aria-label="Nikita Bhandari — Home"
+              className="flex items-center"
+              aria-label="Nikita Bhandari - Home"
             >
-              NB<span className="text-gradient-blue">.</span>
+              <Image
+                src="/icon.png"
+                alt="Nikita Bhandari Logo"
+                width={42}
+                height={42}
+                priority
+                className="transition-transform duration-300 hover:scale-105"
+              />
             </a>
 
             {/* Desktop links */}
@@ -137,7 +145,11 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-16 z-40 glass border-b border-white/[0.06] lg:hidden"
+            className="fixed inset-x-0 top-16 z-40 lg:hidden
+bg-[#0B1120]/75
+backdrop-blur-lg
+border-b border-white/10
+shadow-black/40 shadow-2xl"
           >
             <div className="px-4 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
