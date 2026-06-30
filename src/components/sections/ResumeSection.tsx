@@ -31,7 +31,7 @@ export function ResumeSection() {
                   </h2>
                   <p className="text-white/50 text-sm max-w-md">
                     Download my resume for a full overview of my skills,
-                    experience, and projects. Last updated June 2026.
+                    experience, and projects.
                   </p>
                 </div>
               </div>
@@ -45,7 +45,7 @@ export function ResumeSection() {
                   className="flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-500 hover:bg-blue-400 text-white text-sm font-semibold transition-colors shadow-lg shadow-blue-500/20"
                 >
                   <Download size={15} />
-                  Download PDF
+                  Download Resume
                 </motion.a>
                 <motion.a
                   href="/resume.pdf"
